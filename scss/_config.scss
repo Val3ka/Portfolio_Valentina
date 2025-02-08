@@ -1,0 +1,12 @@
+$primary-color: #49a1e9;
+$secondary-color: #272727;
+$tertiary-color: #c2e1fa;
+$font-size-large: 32px;
+$font-size-medium: 25px;
+$font-size-small: 18px;
+
+@mixin full-width {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
