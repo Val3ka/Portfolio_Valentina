@@ -19,7 +19,7 @@ header {
 }
 
 body {
-    background-image: url("img/sfondo_portfolio.jpg");
+    background-image: url("../img/sfondo_portfolio.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -52,6 +52,9 @@ footer {
     margin-top: auto;
     background-color: $primary-color;
     .social-icons {
+        color: $secondary-color;
+    }
+    i {
         color: $secondary-color;
     }
 }

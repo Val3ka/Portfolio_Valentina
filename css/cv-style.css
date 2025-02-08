@@ -136,6 +136,10 @@ footer {
   margin-top: auto;
 }
 
+footer .i {
+  color: #272727;
+}
+
 @media screen and (max-width: 768px) {
   .box {
     flex-direction: column;

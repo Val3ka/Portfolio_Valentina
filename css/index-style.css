@@ -53,6 +53,9 @@ footer {
 footer .social-icons {
   color: #272727;
 }
+footer .i {
+  color: #272727;
+}
 
 .navbar {
   display: flex;

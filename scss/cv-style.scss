@@ -134,6 +134,9 @@ footer {
     padding-top: 20px;
     bottom: 0;
     margin-top: auto;
+    i {
+        color: $secondary-color;
+    }
 }
 
 @media screen and (max-width: 768px) {
