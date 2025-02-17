@@ -64,6 +64,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    .btn {
+        background-color: $primary-color;
+        display: none;
+        cursor: pointer;
+    }
     .nav-link {
         display: flex;
         justify-content: space-around; 
@@ -77,9 +82,12 @@ footer {
                 text-decoration: none;
                 color: $secondary-color;
             }
+            a:hover {
+                color: #0044ff;
+            }
         }
-    } 
-}
+    }
+}    
 
 .home {
     display: flex;
@@ -271,5 +279,9 @@ footer {
         .bio3 {
             height: auto;
         }
+    }
+    .portflio {
+        display: block;
+        width: 100%;
     }
 }
