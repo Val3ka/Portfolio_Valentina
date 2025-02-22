@@ -6,12 +6,13 @@
     <meta property="og:title" content="Porfolio Valentina"/>
     <meta property="og:description" content="Il portfolio di Valentina Eremita Ruscica"/>
     <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://imgur.com/a/SABleEX"/>
     <script src="https://kit.fontawesome.com/811c0f82fb.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index-style.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -51,15 +52,15 @@
         </div>
         <nav>
             <ul> 
-                <li><a href="index.html#home">Home</a>
+                <li><a href="index.html#home" aria-label="Vai alla homepage">Home</a>
                 </li>               
-                <li><a href="index.html#su-di-me">Su di me</a>
+                <li><a href="index.html#su-di-me" aria-label="Scopri di più su di me">Su di me</a>
                 </li>
-                <li><a href="index.html#portfolio">Portfolio</a>
+                <li><a href="index.html#portfolio" aria-label="Scopri i miei lavori">Portfolio</a>
                 </li>
-                <li><a href="cv.html">CV</a>
+                <li><a href="cv.html" aria-label="Visualizza il mio curriculum">CV</a>
                 </li>
-                <li><a href="index.html#contattami">Contattami</a>
+                <li><a href="index.html#contattami" aria-label="Rimaniamo in contatto">Contattami</a>
                 </li>
             </ul> 
         </nav>
@@ -114,20 +115,40 @@
             </div>   
         </section>
         <section id="portfolio" class="portfolio">
-            <p>ciao</p>
+            <p>Qualche mio lavoro</p>
+            <div class="project">
+                <div class="project-item">
+                    <h1><br><br><br>Questo è stato il mio primo progetto, una semplice pagina senza css per presentarmi. E' infatti molto basica, con giusto gli elementi necessari.</h1>
+                    <img src="img/progetto_1.png" alt="immagine progetto_1">
+                </div>
+                <div class="project-item">
+                    <img src="img/progetto_2.png" alt="immagine progetto_2">
+                    <h1><br><br><br>Il mio secondo progetto è stata una pagina per un'app di meditazione. Qui è evidente la presenza di css, sia dal logo che dallo sfondo.</h1>
+                </div>
+                <div class="project-item">
+                    <h1><br><br>Questo progetto è un sito per una start up, la Green Earth, che si occupa di preservare le foreste e gli oceani.<br> Per questo progetto sono state create varie sezioni differenti.<br> Si può vedere sia la navbar che il footer, come anche un logo sul lato sinistra della navbar.</h1>
+                    <img src="img/progetto_3.png" alt="immagine progetto_3">
+                </div>
+            </div>
         </section>
         <section id="contattami" class="contattami">
-            <h1>Rimaniamo in contatto!</h1>
-            <form id="contact-form">
+            <div class="img-title">
+                <img src="img/contattami_image.png" alt="immagine_lettera_aperta">
+                <h1>Rimaniamo in contatto!</h1>
+            </div>
+            <div class="form">
+                <form id="contact-form">
                 <input type="hidden" name="contact_number" value="697483"><br><br>
-                <label>Name</label><br>
+                <label>Nome</label><br>
                 <input type="text" name="user_name" required><br><br>
                 <label>Email</label><br>
                 <input type="email" name="user_email" required><br><br>
-                <label>Message</label><br>
+                <label>Messaggio</label><br>
                 <textarea name="message"></textarea><br>
                 <input type="submit" value="Send">
-            </form>
+                </form>
+            </div>
+            <p><a href="http://www.freepik.com" class="hidden-link">Designed by pikisuperstar / Freepik</a></p>
         </section>        
     </main>    
     <footer>

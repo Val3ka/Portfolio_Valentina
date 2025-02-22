@@ -16,7 +16,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -28,13 +28,15 @@ header {
 body {
     background-image: url("../img/sfondo_portfolio.jpg");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
 }
 
 main {
@@ -46,6 +48,7 @@ main {
     height: 100%;
     width: 100%;
     overflow-y: auto;
+    padding-top: 60px;
 }
 
 footer {
@@ -68,8 +71,11 @@ footer {
 }
 
 .name {
-    font-size: 32px;
+    font-size: $font-size-large;
     color: $secondary-color;
+    font-family: 'WindSong', cursive;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -111,7 +117,7 @@ nav {
         align-items: center;
         justify-content: flex-start;
         position: absolute;
-        background-color: #b3ddff85;
+        background-color: #b3ddffbe;
         transition: all 0.3s ease-in-out;
         top: 50px;
         left: 0;
@@ -185,7 +191,7 @@ nav {
         height: auto;
         margin: 20px;
         padding-top: 20px;
-        background-color: $tertiary-color;
+        background-color: #b3ddff88;
         border-radius: 10%;
         color: $secondary-color;
         font-size: $font-size-small;
@@ -205,7 +211,7 @@ nav {
         height: 220px;
         margin: 20px;
         padding-top: 20px;
-        background-color: $tertiary-color;
+        background-color: #b3ddff88;
         border-radius: 10%;
         color: $secondary-color;
         font-size: $font-size-small;
@@ -225,7 +231,7 @@ nav {
         height: 350px;
         margin: 20px;
         padding-top: 20px;
-        background-color: $tertiary-color;
+        background-color: #b3ddff88;
         border-radius: 10%;
         color: $secondary-color;
         font-size: $font-size-small;
@@ -240,15 +246,134 @@ nav {
 .portfolio {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 70%;
+    max-width: 100%;
+    min-height: calc(100vh - 60px);
+    width: 90%;
+    padding-top: 80px;
+    
+    p {
+       padding-top: 20px;
+       margin: auto;
+       text-align: center;
+       font-size: $font-size-large;
+       color: $secondary-color; 
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .project-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+
+            h1 {
+                background-color: #b3ddff88;
+                color: $secondary-color;
+                font-size: $font-size-medium;
+                border-radius: 50px;
+                width: 100%;
+                max-width: 500px;
+
+            }
+
+            img {
+                width: 100%;
+                max-width: 700px;
+                transition: transform 0.3s ease-in-out;
+                cursor: pointer;
+                margin-bottom: 32px;
+
+                &:hover {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+
 }
 
 .contattami {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 40px;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    .img-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1000px;
+        margin-bottom: 20px;
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.37);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: $font-size-medium;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: $font-size-medium;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: $primary-color;
+            color: $secondary-color;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: $font-size-small;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #fa5204;
+        }
+    }
+    .hidden-link {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+        white-space: nowrap;
+    }
 }
 
 
@@ -288,6 +413,25 @@ nav {
     flex-direction: column;
 }
 
+
+@media only screen and (max-width: 1060px) {
+
+    .portfolio {
+        
+        .project {
+        
+            .project-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;    
+        
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .su-di-me {
         flex-direction: row;
@@ -317,14 +461,25 @@ nav {
             height: auto;
         }
     }
-    .portflio {
-        display: block;
-        width: 100%;
-    }
+
     header nav ul {
         display: none;
     }
     #hamburger-icon {
         display: block;
     }    
+    
+    .project-item {
+        gap: 5px; 
+        
+        h1 {
+            font-size: $font-size-small;
+            max-width: 95%;
+        }
+
+        img {
+            max-width: 95%; 
+        }
+    }
+
 }
