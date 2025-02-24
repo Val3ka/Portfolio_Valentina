@@ -168,78 +168,119 @@ nav {
         height: 2px;
         background-color: $primary-color;
         margin: 20px 0;
-    }    
+    }   
+    .pattern {
+        position: absolute;
+        bottom: calc(50px + 20px);
+        display: flex;
+        width: 100%;
+        height: 200px;
+        background-image: url(../img/pattern_fiori_lineart.png);
+    } 
 }
 
 .su-di-me {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 15px;
-    height: 100%;
-    flex-wrap: wrap;
-    min-height: 80vh;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
+    min-height: 100vh;
+    padding-top: 40px;
+
+    h1 {
+        padding-top: 0;
+        margin-top: 0;
+        color: $secondary-color;
+        font-size: $font-size-large;
+        font-family: 'WindSong', cursive;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
     .bio1-img {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding-top: 40px;
         width: 100%;
-        max-width: 600px;
-        height: auto;
-        margin: 20px;
-        padding-top: 20px;
-        background-color: #b3ddff88;
-        border-radius: 10%;
-        color: $secondary-color;
-        font-size: $font-size-small;
-        h1 {
+        .bio1 {
             display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.37);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10%;
+            color: $secondary-color;
+            font-size: $font-size-small;
+        }
+        .img {
+            display: flex;
+            flex-direction: row;
             justify-content: center;
-            align-items: center ;
+            align-items: center;
+            width: 70%;
+            margin: 0;
         }
     }
-    .bio2 {
+    .bio2-3 {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-        flex-direction: column;
         width: 100%;
-        max-width: 600px;
-        height: 220px;
-        margin: 20px;
-        padding-top: 20px;
-        background-color: #b3ddff88;
-        border-radius: 10%;
-        color: $secondary-color;
-        font-size: $font-size-small;
-        h1 {
+        margin-top: 40px;
+        .bio2 {
             display: flex;
-            justify-content: center;
-            align-items: center ;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+            height: 220px;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.37);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10%;
+            color: $secondary-color;
+            font-size: $font-size-small;
+            h1 {
+                display: flex;
+                justify-content: center;
+                align-items: center ;
+            }
+        }
+        .bio3 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 700px;
+            height: 350px;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.37);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10%;
+            color: $secondary-color;
+            font-size: $font-size-small;
         }
     }
-    .bio3 {
+    .pattern {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
         width: 100%;
-        max-width: 600px;
-        height: 350px;
-        margin: 20px;
-        padding-top: 20px;
-        background-color: #b3ddff88;
-        border-radius: 10%;
-        color: $secondary-color;
-        font-size: $font-size-small;
-        h1 {
-            display: flex;
-            justify-content: center;
-            align-items: center ;
-        }
+        height: 200px;
+        background-image: url(../img/pattern_fiori_lineart.png);
     }
 }
 
@@ -251,7 +292,6 @@ nav {
     max-width: 100%;
     min-height: calc(100vh - 60px);
     width: 90%;
-    padding-top: 80px;
     
     p {
        padding-top: 20px;
@@ -259,6 +299,13 @@ nav {
        text-align: center;
        font-size: $font-size-large;
        color: $secondary-color; 
+    }
+
+    .pattern {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        background-image: url(../img/pattern_fiori_lineart.png);
     }
 
     .project {
@@ -448,7 +495,7 @@ nav {
 
 @media only screen and (max-width: 768px) {
     .su-di-me {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         padding-top: 20px;        
         overflow: visible;
