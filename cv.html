@@ -13,26 +13,41 @@
     <title>CV Valentina Eremita Ruscica</title>
 </head>
 <header>
-    <nav class="navbar">
-        <ul class="nav-link"> 
-            <li>
-                <a href="index.html#home">Home</a>
+    <div class="name">
+        <p>Valentina</p>
+    </div>
+    <nav>
+        <ul> 
+            <li><a href="index.html#home" aria-label="Vai alla homepage">Home</a>
             </li>               
-            <li>
-                <a href="index.html#su-di-me">Su di me</a>
+            <li><a href="index.html#su-di-me" aria-label="Scopri di più su di me">Su di me</a>
             </li>
-            <li>
-                <a href="index.html#portfolio">Portfolio</a>
+            <li><a href="index.html#portfolio" aria-label="Scopri i miei lavori">Portfolio</a>
             </li>
-            <li>
-                <a href="cv.html">CV</a>
+            <li><a href="cv.html" aria-label="Visualizza il mio curriculum">CV</a>
             </li>
-            <li>
-                <a href="index.html#contattami">Contattami</a>
+            <li><a href="index.html#contattami" aria-label="Rimaniamo in contatto">Contattami</a>
             </li>
         </ul> 
-    </nav>    
-</header>
+    </nav>
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+            <li><a href="index.html#home">Home</a>
+            </li>               
+            <li><a href="index.html#su-di-me">Su di me</a>
+            </li>
+            <li><a href="index.html#portfolio">Portfolio</a>
+            </li>
+            <li><a href="cv.html">CV</a>
+            </li>
+            <li><a href="index.html#contattami">Contattami</a>
+            </li>
+        </ul>
+    </div>     
+</header>    
 <body>
     <div class="box">
         <aside>
@@ -166,5 +181,6 @@
             <p>Copyright © 2025 Valentina Eremita Ruscica</p>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
