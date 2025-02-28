@@ -162,7 +162,7 @@ nav {
         justify-content: center;
         align-items: center;
         color: $secondary-color;
-        font-size: $font-size-medium
+        font-size: $font-size-medium;
     }
     .horizontal-line {
         @include full-width;
@@ -303,12 +303,12 @@ nav {
     }
 }
 
-.portfolio{
+.portfolio {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 1050px;
+    padding-top: 1200px;
     gap: 40px;
     width: 100%;
     h1 {
@@ -333,18 +333,28 @@ nav {
         max-width: 900px;
         margin: 0 auto;
 
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: $font-size-medium;
+            color: $secondary-color;
+        }
+
         .card {
             width: 100%;
             max-width: 900px;
-            background-color: #f4f4f4;
+            background-color: rgba(255, 255, 255, 0.37);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10%;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
             .card-text {
                 text-align: center;
                 font-size: $font-size-medium;
                 color: $secondary-color;
+            }
         }
     }
 
@@ -361,6 +371,7 @@ nav {
     text-align: center;
     min-height: 100vh;
     position: relative;
+
     .img-title {
         display: flex;
         flex-direction: column;
@@ -482,6 +493,15 @@ nav {
     flex-direction: column;
 }
 
+@media only screen and (max-width: 1000px) {
+
+    .portfolio {
+        max-width: 80%;
+        .card-text {
+            font-size: $font-size-small;
+        } 
+    }
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -493,10 +513,12 @@ nav {
         overflow: visible;
         width: 100%;
         min-height: auto;
+
         h1 {
             margin-top: 50px;
             padding-top: 290px;
         }
+
         .bio1-img, .bio2-3 {
             width: 100%;
             display: flex;
@@ -504,19 +526,23 @@ nav {
             align-items: center;
             margin: 20px 0;
         }
+
         .bio1 {
             width: 100%;
             margin-top: 40px;
             padding-top: 80px;
         }
+
         .img {
             padding-bottom: 5px;
         }
+
         .bio2, .bio3 {
             flex-direction: column;
             align-items: center;
             width: 100%;
         }
+
         .bio3 {
             height: auto;
         }
@@ -524,11 +550,17 @@ nav {
 
     header nav ul {
         display: none;
+        
     }
     #hamburger-icon {
         display: block;
     }    
     
+    .portfolio {
+        max-width: 80%;
+    }
+
+
     .project-item {
         gap: 5px; 
         
