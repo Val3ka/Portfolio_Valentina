@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Porfolio Valentina"/>
+    <meta property="og:title" content="Portfolio Valentina"/>
     <meta property="og:description" content="Il portfolio di Valentina Eremita Ruscica"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="https://imgur.com/a/SABleEX"/>
@@ -13,36 +13,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index-style.min.css">
+    <link rel="stylesheet" href="assets/css/index-style.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init({
-              publicKey: "service_y6t18ag",
-            });
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault()
-                emailjs.sendForm('portfolio_gmail', 'template_8h5ea5n', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            if (window.location.hash === '') {
-                window.location.hash = '#home';  
-            }
-        }
-    </script>
     <title>Il mio Porfolio</title>
 </head>
 <body>
@@ -84,10 +57,15 @@
     </header>    
     <main>
         <section id="home" class="home">
-            <h1>Valentina Eremita Ruscica</h1>
+            <h1>Ciao, sono<br>Valentina Eremita Ruscica</h1>
             <div class="horizontal-line"></div>
-            <p>Front End Developer Student</p>
-            <div class="pattern">
+            <div class="bio-home">
+            <p>Sto studiando per diventare Front-End Developer e adoro trasformare idee in esperienze digitali intuitive e coinvolgenti. Mi appassionano HTML, CSS e JavaScript, e sono sempre alla ricerca di nuove sfide per migliorare le mie competenze. Esplora i miei progetti e scopri il mio percorso nel mondo dello sviluppo web! 🚀</p>
+            </div>
+            <div>
+                <a class="button" href="index.html#portfolio">
+                    <button aria-label="Scopri i miei progetti">Scopri i miei<br>progetti</button>
+                </a>
             </div>
         </section>
         <section id="su-di-me" class="su-di-me">
@@ -123,7 +101,7 @@
 
                 <div class="card">
                     <p>Primo progetto</p>
-                    <img src="img/progetto_1.png" class="card-img-top" alt="immagine_progetto_1">
+                    <img src="assets/img/progetto_1.png" class="card-img-top" alt="immagine_progetto_1">
                     <div class="card-body">
                     <p class="card-text">Questo è stato il mio primo progetto, una semplice pagina senza css per presentarmi. E' infatti molto basica, con giusto gli elementi necessari.</p>
                     </div>
@@ -131,7 +109,7 @@
 
                 <div class="card">
                     <p>Secondo progetto</p>
-                    <img src="img/progetto_2.png" class="card-img-top" alt="immagine_progetto_2">
+                    <img src="assets/img/progetto_2.png" class="card-img-top" alt="immagine_progetto_2">
                     <div class="card-body">
                     <p class="card-text">Il mio secondo progetto è stata una pagina per un'app di meditazione. Qui è evidente la presenza di css, sia dal logo che dallo sfondo.</p>
                     </div>
@@ -139,7 +117,7 @@
 
                 <div class="card">
                     <p>Terzo progetto</p>
-                    <img src="img/progetto_3.png" class="card-img-top" alt="immagine_progetto_3">
+                    <img src="assets/img/progetto_3.png" class="card-img-top" alt="immagine_progetto_3">
                     <div class="card-body">
                     <p class="card-text">Questo progetto è un sito per una start up, la Green Earth, che si occupa di preservare le foreste e gli oceani.<br> Per questo progetto sono state create varie sezioni differenti.<br> Si può vedere sia la navbar che il footer, come anche un logo sul lato sinistra della navbar.</p>
                     </div>
@@ -181,7 +159,7 @@
             <p>Copyright © 2025 Valentina Eremita Ruscica</p>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
